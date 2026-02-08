@@ -56,6 +56,34 @@
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
+        .contact-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Moves the container to the right side */
+            display: flex;
+            flex-direction: column; /* Stacks the buttons vertically */
+            gap: 10px;
+            z-index: 1000;
+            width: auto; /* Width will fit the content */
+        }
+        .btn-action {
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+            min-width: 140px; /* Ensures consistent button size */
+        }
+
+         .whatsapp { background-color: #25d366; }
+         .call { background-color: #007bff; }
+
+         .btn-action:active {
+             transform: scale(0.95);
+        }
     </style>
 </head>
 <body>
@@ -94,8 +122,15 @@
         
         </div>
     </div>
+    <div class="contact-container">
+        <a href="https://wa.me/919045699768?text=I%20want%20to%20order%20from%20MomoAmore" class="btn-action whatsapp">
+            WhatsApp To Order
+        </a>
 
-    <a href="https://wa.me/919045699768" class="floating-btn">Order on WhatsApp</a>
+        <a href="tel:+919045699768" class="btn-action call">
+            Call Now To Order
+        </a>
+    </div>
 
 </body>
 </html>
